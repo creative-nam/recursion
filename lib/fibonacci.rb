@@ -20,7 +20,16 @@ def fibonnaci_sequence(num)
   p fib_nums
 end
 
-fibonnaci_sequence 1
-fibonnaci_sequence 2
-fibonnaci_sequence 3
 fibonnaci_sequence 8
+
+def recursive_fibonacci_sequence(num)
+  if num == 1
+    0
+  elsif num == 2
+    1
+  else
+    recursive_fibonacci_sequence(num - 2) + recursive_fibonacci_sequence(num - 1)
+  end
+end
+
+puts recursive_fibonacci_sequence 8
